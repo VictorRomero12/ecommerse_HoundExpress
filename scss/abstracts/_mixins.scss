@@ -1,0 +1,115 @@
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'sm' {
+      @media (min-width: $breakpoint-sm) {
+        @content;
+      }
+    }
+    @if $breakpoint == 'md' {
+      @media (min-width: $breakpoint-md) {
+        @content;
+      }
+    }
+    @if $breakpoint == 'lg' {
+      @media (min-width: $breakpoint-lg) {
+        @content;
+      }
+    }
+    @if $breakpoint == 'xl' {
+      @media (min-width: $breakpoint-xl) {
+        @content;
+      }
+    }
+  }
+  
+  @mixin respond-below($breakpoint) {
+    @if $breakpoint == 'sm' {
+      @media (max-width: calc(#{$breakpoint-sm} - 1px)) {  // ✅ Variable corregida
+        @content;
+      }
+    }
+    @if $breakpoint == 'md' {
+      @media (max-width: calc(#{$breakpoint-md} - 1px)) {  // ✅ Espacio agregado
+        @content;
+      }
+    }
+    @if $breakpoint == 'lg' {
+      @media (max-width: calc(#{$breakpoint-lg} - 1px)) {  // ✅ Variable corregida
+        @content;
+      }
+    }
+  }
+
+  @mixin flex($direction: row, $justify: center, $align: center, $wrap: nowrap, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    @if $gap > 0 {
+      gap: $gap;
+    }
+  }
+  
+
+  @mixin grid($columns: repeat(auto-fit, minmax(250px, 1fr)), $gap: $spacing-base) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+  }
+  
+
+  @mixin container($width: $width-container, $max-width: $max-width-lg) {
+    width: $width;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  @mixin hover-transform($y: -5px) {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: translateY($y);
+    }
+  }
+  
+
+  @mixin button($bg-color: $color-primary, $text-color: $color-white, $hover-color: $color-secondary, $padding-x: $spacing-lg, $padding-y: $spacing-md) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding-y $padding-x;
+    border: none;
+    border-radius: $border-radius-sm;
+    font-size: $font-size-base;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+  
+ 
+  @mixin status-badge($bg-color, $text-color) {
+    display: inline-block;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $border-radius-pill;
+    font-size: $font-size-xs;
+    font-weight: 500;
+    text-align: center;
+    background-color: $bg-color;
+    color: $text-color;
+  }
+  
+  
+  @mixin card($bg-color: $color-white, $padding: $spacing-lg, $radius: $border-radius-md, $shadow: $box-shadow-md) {
+    background: $bg-color;
+    padding: $padding;
+    border-radius: $radius;
+    box-shadow: $shadow;
+  }
+  
+
+  @mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+    transition: $property $duration $timing;
+  }

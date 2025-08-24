@@ -1,0 +1,105 @@
+
+
+.card {
+    @include card($color-white, $spacing-lg, $border-radius-md, $box-shadow-md);
+    
+    &--stat {
+      background: $color-light;
+      text-align: center;
+      @include hover-transform;
+      
+      h3 {
+        color: $color-text;
+        margin-bottom: $spacing-md;
+        font-size: $font-size-lg;
+      }
+      
+      .stat-number {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        color: $color-primary;
+        display: block;
+        margin-bottom: $spacing-sm;
+      }
+      
+      .stat-description {
+        color: $color-text-light;
+        font-size: $font-size-sm;
+        margin: 0;
+      }
+    }
+    
+    &--feature {
+      @include card($color-white, $spacing-lg, $border-radius-lg, $box-shadow-xl);
+      text-align: center;
+      @include hover-transform(-10px);
+      
+      &__icon {
+        font-size: $font-size-icon;
+        margin-bottom: $spacing-base;
+      }
+      
+      h3 {
+        color: $color-dark;
+        margin-bottom: $spacing-base;
+        font-size: $font-size-lg;
+      }
+      
+      p {
+        color: $color-text-light;
+        font-size: $font-size-base;
+      }
+    }
+    
+    &--guide {
+      @include card($color-white, $spacing-base, $border-radius-md, $box-shadow-sm);
+      border: 1px solid $color-border;
+      margin-bottom: $spacing-base;
+      
+      h3 {
+        margin: 0 0 0.8rem 0;
+        color: $color-dark;
+        font-size: $font-size-lg;
+      }
+      
+      &__details {
+        margin-bottom: 0.8rem;
+        
+        p {
+          margin: 0.3rem 0;
+          font-size: $font-size-sm;
+        }
+      }
+      
+      &__actions {
+        @include flex(row, null, null, wrap, $spacing-sm);
+      }
+    }
+  }
+  
+  
+  .stat-box {
+    @extend .card--stat;
+  }
+  
+  .feature-card {
+    @extend .card--feature;
+    
+    &-icon {
+      @extend .card--feature__icon;
+    }
+  }
+  
+  .guide {
+    &-card {
+      @extend .card--guide;
+    }
+    
+    &-details {
+      @extend .card--guide__details;
+    }
+    
+    &-actions {
+      @extend .card--guide__actions;
+    }
+  }

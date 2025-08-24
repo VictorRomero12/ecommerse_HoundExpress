@@ -1,0 +1,18 @@
+
+
+.main-nav {
+    @extend .navbar;
+  }
+  
+
+  .guide-controls {
+    @include flex(row, space-between, center, wrap, $spacing-base);
+    margin-bottom: $spacing-lg;
+  }
+  
+
+  .stats-container {
+    @include grid;
+    margin: $spacing-base;
+    padding: $spacing-sm;
+  }

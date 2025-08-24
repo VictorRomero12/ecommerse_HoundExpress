@@ -1,0 +1,65 @@
+
+
+.form {
+    &__container {
+      @include container($width-container, $max-width-lg);
+      margin: $spacing-base auto;
+      padding: 0 $spacing-base;
+      
+      h1 {
+        color: $color-dark;
+        margin-bottom: $spacing-lg;
+        font-size: $font-size-xl;
+        border-left: 4px solid $color-primary;
+        padding-left: $spacing-base;
+      }
+    }
+    
+    &__group {
+      margin-bottom: $spacing-base;
+    }
+    
+    &__label {
+      display: block;
+      margin-bottom: $spacing-sm;
+      font-weight: 500;
+      color: $color-text;
+      font-size: $font-size-base;
+    }
+    
+    &__input {
+      width: 100%;
+      padding: $spacing-md;
+      border: 1px solid $color-border;
+      border-radius: $border-radius-sm;
+      font-size: $font-size-base;
+      box-sizing: border-box;
+    }
+    
+    &__select {
+      @extend .form__input;
+      background-color: $color-white;
+    }
+    
+    &__button {
+      @include button;
+      width: 100%;
+      
+      &:hover {
+        background-color: $color-secondary;
+      }
+    }
+  }
+  
+
+  label {
+    @extend .form__label;
+  }
+  
+  input[type="text"], select {
+    @extend .form__input;
+  }
+  
+  button {
+    @extend .form__button;
+  }

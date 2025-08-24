@@ -1,0 +1,34 @@
+// main.scss - Sintaxis SCSS pura
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/base';
+
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/cards';
+@import 'components/navigation';
+@import 'components/tables';
+@import 'components/modal';
+
+@import 'layout/header';
+@import 'layout/hero';
+@import 'layout/footer';
+
+// Media queries responsive
+@media (max-width: calc(768px - 1px)) {
+  .search-box,
+  .filter-options {
+    flex-direction: column;
+  }
+
+  .guide-actions {
+    flex-direction: column;
+  }
+
+  .btn-details,
+  .btn-track {
+    width: 100%;
+    margin-bottom: 0.3rem;
+  }
+}

@@ -1,0 +1,76 @@
+
+// Fuentes
+$font-family-base: 'Open Sans', sans-serif;
+
+// Colores Corporativos
+$color-primary: #6AC6DE;
+$color-secondary: #091E3F;
+$color-dark: #2c3e50;
+$color-light: #f8f9fa;
+$color-white: #fff;
+$color-text: #333;
+$color-text-light: #666;
+$color-text-lighter: #bdc3c7;
+$color-text-white: #ecf0f1;
+$color-border: #ddd;
+$color-border-light: #eee;
+$color-shadow: rgba(0, 0, 0, 0.1);
+$color-shadow-dark: rgba(0, 0, 0, 0.7);
+
+// Colores de Estado
+$color-status-transit-bg: #fff8e1;
+$color-status-transit-text: #f57c00;
+$color-status-pending-bg: #e3f2fd;
+$color-status-pending-text: #091E3F;
+$color-status-delivered-bg: #e8f5e9;
+$color-status-delivered-text: #2e7d32;
+$color-success: #28a745;
+$color-success-dark: #218838;
+$color-info: #17a2b8;
+$color-info-dark: #138496;
+$color-warning: #f1c40f;
+
+// Espaciado
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 0.75rem;
+$spacing-base: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+// Bordes
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 10px;
+$border-radius-xl: 12px;
+$border-radius-pill: 50px;
+
+// Sombras
+$box-shadow-sm: 0 1px 3px $color-shadow;
+$box-shadow-md: 0 2px 4px $color-shadow;
+$box-shadow-lg: 0 2px 8px $color-shadow;
+$box-shadow-xl: 0 4px 6px $color-shadow;
+
+// Fuentes Responsivas
+$font-size-xs: clamp(0.7rem, 2vw, 0.8rem);
+$font-size-sm: clamp(0.8rem, 2vw, 0.9rem);
+$font-size-base: clamp(0.9rem, 2vw, 1rem);
+$font-size-md: clamp(1rem, 2.5vw, 1.2rem);
+$font-size-lg: clamp(1.1rem, 2.5vw, 1.3rem);
+$font-size-xl: clamp(1.4rem, 3vw, 1.8rem);
+$font-size-xxl: clamp(1.8rem, 4vw, 2.5rem);
+$font-size-hero: clamp(2rem, 5vw, 3.5rem);
+$font-size-icon: clamp(2rem, 5vw, 3rem);
+
+// Anchos
+$width-container: 90%;
+$max-width-sm: 600px;
+$max-width-md: 800px;
+$max-width-lg: 1200px;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

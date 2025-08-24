@@ -1,0 +1,45 @@
+
+.table {
+    &--guides {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: $color-white;
+      box-shadow: $box-shadow-lg;
+      border-radius: $border-radius-md;
+      overflow-x: auto;
+      display: block;
+      
+      th, td {
+        padding: $spacing-md;
+        text-align: left;
+        font-size: $font-size-base;
+      }
+      
+      th {
+        background-color: $color-light;
+        font-weight: 600;
+        color: $color-text;
+        border-bottom: 2px solid $color-border-light;
+      }
+      
+      td {
+        border-bottom: 1px solid $color-border-light;
+      }
+      
+      tr {
+        &:last-child td {
+          border-bottom: none;
+        }
+        
+        &:hover {
+          background-color: $color-light;
+        }
+      }
+    }
+  }
+  
+  
+  .guides-table {
+    @extend .table--guides;
+  }

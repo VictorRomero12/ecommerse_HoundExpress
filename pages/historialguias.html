@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scss/main.css">
+    <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar" id="navbar-container"> 
+      <div class="navbar__brand">
+        <img src="../img/logo.png" alt="Logo de Hound Express" class="navbar__logo" />
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a  onclick="navigateIndex()" class="navbar__link navbar__link--active"">Inicio</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateFormulario()" class="navbar__link">Registro de guías</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateEstado()" class="navbar__link">Estado general</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateListaGuias()" class="navbar__link">Lista de guías</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateBuscarGuias()" class="navbar__link">Buscar guías</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateHistorialGuias()" class="navbar__link">Historial de guías</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+      <div class="form__container">
+        <h1>Historial de guías</h1>
+        <div class="history">
+            <div class="history__filters">
+                <input type="date" class="history__date-filter" />
+                <select class="history__status-filter">
+                    <option value="">Todos los estados</option>
+                    <option value="pending">Pendiente</option>
+                    <option value="transit">En tránsito</option>
+                    <option value="delivered">Entregado</option>
+                </select>
+            </div>
+            
+            <div class="history__list">
+                <div class="history__item">
+                    <div class="history__header">
+                        <h3>Guía #GU-2024-001</h3>
+                        <span class="history__date">15 Ene 2024</span>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline__item timeline__item--completed">
+                            <span class="timeline__time">09:00</span>
+                            <p>Guía creada en Ciudad de México</p>
+                        </div>
+                        <div class="timeline__item timeline__item--completed">
+                            <span class="timeline__time">11:30</span>
+                            <p>En tránsito hacia Guadalajara</p>
+                        </div>
+                        <div class="timeline__item timeline__item--current">
+                            <span class="timeline__time">14:30</span>
+                            <p>Llegada a centro de distribución</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="history__item">
+                    <div class="history__header">
+                        <h3>Guía #GU-2024-002</h3>
+                        <span class="history__date">14 Ene 2024</span>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline__item timeline__item--completed">
+                            <span class="timeline__time">10:00</span>
+                            <p>Guía creada en Monterrey</p>
+                        </div>
+                        <div class="timeline__item timeline__item--completed">
+                            <span class="timeline__time">12:00</span>
+                            <p>En proceso de recolección</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+
+.navbar {
+    @include flex(row, space-between, center, wrap);
+    padding: $spacing-base;
+    background-color: $color-light;
+    box-shadow: $box-shadow-md;
+    
+    &__brand {
+      img {
+        height: 40px;
+        width: auto;
+      }
+    }
+    
+    &__menu {
+      @include flex(row, null, null, wrap, $spacing-base);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+      li {
+        a {
+          text-decoration: none;
+          color: $color-text;
+          font-weight: 500;
+          transition: color 0.3s ease;
+          font-size: $font-size-base;
+          
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }

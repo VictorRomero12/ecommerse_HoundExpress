@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../scss/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    
+    <header class="header">
+      <nav class="navbar" id="navbar-container"> 
+        <div class="navbar__brand">
+          <img src="../img/logo.png" alt="Logo de Hound Express" class="navbar__logo" />
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a  onclick="navigateIndex()" class="navbar__link navbar__link--active"">Inicio</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateFormulario()" class="navbar__link">Registro de guías</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateEstado()" class="navbar__link">Estado general</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateListaGuias()" class="navbar__link">Lista de guías</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateBuscarGuias()" class="navbar__link">Buscar guías</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateHistorialGuias()" class="navbar__link">Historial de guías</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+ 
+    <div class="form__container">
+      <h1>Estado General del Sistema</h1>
+      
+      <div class="stats">
+          <div class="card card--stat">
+              <h3>Guías Activas</h3>
+              <span class="stat-number" id="total-guias">0</span>
+              <p class="stat-description">Total de guías en el sistema</p>
+          </div>
+          
+          <div class="card card--stat">
+              <h3>En Tránsito</h3>
+              <span class="stat-number" id="guias-transito">0</span>
+              <p class="stat-description">Guías actualmente en ruta</p>
+          </div>
+          
+          <div class="card card--stat">
+              <h3>Entregadas</h3>
+              <span class="stat-number" id="">0</span>
+              <p class="stat-description">Guías completadas</p>
+          </div>
+      </div>
+  </div>
+  
+  <footer class="footer">
+      <div class="footer__content">
+          <div class="footer__section">
+              <h3>Hound Express</h3>
+              <p>Soluciones logísticas confiables para tu negocio</p>
+          </div>
+          <div class="footer__section">
+              <h3>Contacto</h3>
+              <p>Email: contacto@houndexpress.com</p>
+              <p>Tel: (55) 1234-5678</p>
+              <p>Dirección: Av. Principal #123, CDMX</p>
+          </div>
+          <div class="footer__section">
+              <h3>Enlaces Rápidos</h3>
+              <ul>
+                  <li><a href="pages/formulario.html">Registro de guías</a></li>
+                  <li><a href="pages/estado.html">Estado general</a></li>
+                  <li><a href="pages/listaguias.html">Lista de guías</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer__bottom">
+          <p>&copy; 2024 Hound Express. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+  <script src="../js/index.js"></script>
+  </body>
+</html>

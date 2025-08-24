@@ -1,0 +1,159 @@
+
+.button {
+    padding: $spacing-md $spacing-lg;
+    border-radius: $border-radius-sm;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    font-size: $font-size-base;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+      transform: translateY(-3px);
+    }
+    
+    
+    &--primary {
+      background-color: $color-primary;
+      color: $color-white;
+      
+      &:hover {
+        background-color: $color-secondary;
+      }
+    }
+    
+    &--secondary {
+      background-color: transparent;
+      border: 2px solid $color-white;
+      color: $color-white;
+    }
+    
+    &--success {
+      background-color: $color-success;
+      color: $color-white;
+      
+      &:hover {
+        background-color: $color-success-dark;
+      }
+    }
+    
+    &--info {
+      background-color: $color-info;
+      color: $color-white;
+      
+      &:hover {
+        background-color: $color-info-dark;
+      }
+    }
+    
+    &--large {
+      background-color: $color-white;
+      color: $color-primary;
+      font-size: $font-size-md;
+    }
+    
+    &--details {
+      padding: 0.4rem 0.8rem;
+      background-color: #2ecc71;
+      color: $color-white;
+      font-size: $font-size-sm;
+      flex: 1;
+      
+      &:hover {
+        background-color: #27ae60;
+      }
+    }
+    
+    &--track {
+      padding: 0.4rem 0.8rem;
+      background-color: $color-primary;
+      color: $color-white;
+      font-size: $font-size-sm;
+      flex: 1;
+      
+      &:hover {
+        background-color: $color-secondary;
+      }
+    }
+    
+    &__icon {
+      margin-right: $spacing-sm;
+    }
+  }
+  
+ 
+  .action-button {
+    padding: $spacing-sm $spacing-base;
+    margin: $spacing-xs;
+    border: none;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    font-size: $font-size-sm;
+    align-items: center;
+    transition: all 0.2s ease;
+    width: auto;
+    
+    &:hover {
+      transform: translateY(-1px);
+    }
+    
+    &--update {
+      background-color: $color-success;
+      color: $color-white;
+      
+      &:hover {
+        background-color: $color-success-dark;
+      }
+    }
+    
+    &--history {
+      background-color: $color-info;
+      color: $color-white;
+      
+      &:hover {
+        background-color: $color-info-dark;
+      }
+    }
+  }
+  
+
+  .btn {
+    @extend .button;
+    
+    &-primary {
+      @extend .button--primary;
+    }
+    
+    &-secondary {
+      @extend .button--secondary;
+    }
+    
+    &-large {
+      @extend .button--large;
+    }
+    
+    &-details {
+      @extend .button--details;
+    }
+    
+    &-track {
+      @extend .button--track;
+    }
+    
+    &-update {
+      @extend .action-button--update;
+    }
+    
+    &-history {
+      @extend .action-button--history;
+    }
+    
+    &-icon {
+      @extend .button__icon;
+    }
+  }
+  
+  %btn-action {
+    @extend .action-button;
+  }

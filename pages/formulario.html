@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scss/main.css">
+    <title>Registro de guías</title>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar" id="navbar-container"> 
+      <div class="navbar__brand">
+        <img src="../img/logo.png" alt="Logo de Hound Express" class="navbar__logo" />
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a  onclick="navigateIndex()" class="navbar__link navbar__link--active"">Inicio</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateFormulario()" class="navbar__link">Registro de guías</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateEstado()" class="navbar__link">Estado general</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateListaGuias()" class="navbar__link">Lista de guías</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateBuscarGuias()" class="navbar__link">Buscar guías</a>
+        </li>
+        <li class="navbar__item">
+          <a  onclick="navigateHistorialGuias()" class="navbar__link">Historial de guías</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <form action="" class="form__container">
+    <h1>Registro de guías</h1>
+    
+    <div class="form__group">
+        <label for="guia">Número de guía</label>
+        <input type="text" id="guia" name="guia">
+    </div>
+    
+    <div class="form__group">
+        <label for="origen">Origen</label>
+        <input type="text" id="origen" name="origen">
+    </div>
+    
+    <div class="form__group">
+        <label for="destino">Destino</label>
+        <input type="text" id="destino" name="destino">
+    </div>
+    
+    <div class="form__group">
+        <label for="destinatario">Destinatario</label>
+        <input type="text" id="destinatario" name="destinatario">
+    </div>
+    
+    <div class="form__group">
+        <label for="fecha_creacion">Fecha de creación</label>
+        <input type="text" id="fecha_creacion" name="fecha_creacion">
+    </div>
+    
+    <div class="form__group">
+        <label for="estado">Estado inicial</label>
+        <select name="estado" id="estado">
+            <option value="1">Pendiente</option>
+            <option value="2">En tránsito</option>
+            <option value="4">Entregado</option>
+        </select>
+    </div>
+    
+    <button type="submit">Registrar guía</button>
+</form>
+<footer class="footer">
+    <div class="footer__content">
+        <div class="footer__section">
+            <h3>Hound Express</h3>
+            <p>Soluciones logísticas confiables para tu negocio</p>
+        </div>
+        <div class="footer__section">
+            <h3>Contacto</h3>
+            <p>Email: contacto@houndexpress.com</p>
+            <p>Tel: (55) 1234-5678</p>
+            <p>Dirección: Av. Principal #123, CDMX</p>
+        </div>
+        <div class="footer__section">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="#">Registro de guías</a></li>
+                <li><a href="#">Estado general</a></li>
+                <li><a href="#">Lista de guías</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>&copy; 2024 Hound Express. Todos los derechos reservados.</p>
+    </div>
+</footer>
+<script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de guías</title>
+    <link rel="stylesheet" href="../scss/main.css" />   
+  </head>
+  <body>
+     <header class="header">
+        <nav class="navbar" id="navbar-container"> 
+            <div class="navbar__brand">
+                <img src="../img/logo.png" alt="Logo de Hound Express" class="navbar__logo" />
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a onclick="navigateIndex()" class="navbar__link navbar__link--active">Inicio</a>
+                </li>
+                <li class="navbar__item">
+                    <a onclick="navigateFormulario()" class="navbar__link">Registro de guías</a>
+                </li>
+                <li class="navbar__item">
+                    <a onclick="navigateEstado()" class="navbar__link">Estado general</a>
+                </li>
+                <li class="navbar__item">
+                    <a onclick="navigateListaGuias()" class="navbar__link">Lista de guías</a>
+                </li>
+                <li class="navbar__item">
+                    <a onclick="navigateBuscarGuias()" class="navbar__link">Buscar guías</a>
+                </li>
+                <li class="navbar__item">
+                    <a onclick="navigateHistorialGuias()" class="navbar__link">Historial de guías</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form__container">
+        <h1>Lista de Guías</h1>        
+        <table class="table table--guides">
+            <thead>
+                <tr>
+                    <th>Número de Guía</th>
+                    <th>Estado</th>
+                    <th>Origen</th>
+                    <th>Destino</th>
+                    <th>Última Actualización</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-guias">
+               <p>No hay guias existentes </p>
+            </tbody>
+        </table>
+    </div> 
+    
+    <!-- Modal de Actualización -->
+<div id="modalActualizar" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Actualizar Guía</h2>
+            <button class="modal-close" type="button">&times;</button>
+        </div>
+        
+        <form class="modal-form" id="formActualizar">
+            <div class="modal-form-group">
+                <label for="modalNumeroGuia">Número de Guía:</label>
+                <input type="text" id="modalNumeroGuia" readonly>
+            </div>
+            
+            <div class="modal-form-group">
+                <label for="modalOrigen">Origen:</label>
+                <input type="text" id="modalOrigen" required>
+            </div>
+            
+            <div class="modal-form-group">
+                <label for="modalDestino">Destino:</label>
+                <input type="text" id="modalDestino" required>
+            </div>
+            
+            <div class="modal-form-group">
+                <label for="modalDestinatario">Destinatario:</label>
+                <input type="text" id="modalDestinatario" required>
+            </div>
+            
+            <div class="modal-form-group">
+                <label for="modalEstado">Estado:</label>
+                <select id="modalEstado" required>
+                    <option value="1">Pendiente</option>
+                    <option value="2">En tránsito</option>
+                    <option value="4">Entregado</option>
+                </select>
+            </div>
+            
+            <div class="modal-buttons">
+                <button type="button" class="btn-modal btn-modal--secondary" id="btnCancelar">Cancelar</button>
+                <button type="submit" class="btn-modal btn-modal--primary">Actualizar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h3>Hound Express</h3>
+                <p>Soluciones logísticas confiables para tu negocio</p>
+            </div>
+            <div class="footer__section">
+                <h3>Contacto</h3>
+                <p>Email: contacto@houndexpress.com</p>
+                <p>Tel: (55) 1234-5678</p>
+                <p>Dirección: Av. Principal #123, CDMX</p>
+            </div>
+            <div class="footer__section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="pages/formulario.html">Registro de guías</a></li>
+                    <li><a href="pages/estado.html">Estado general</a></li>
+                    <li><a href="pages/listaguias.html">Lista de guías</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2024 Hound Express. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+  <script src="../js/index.js"></script>
+  </body>
+</html>

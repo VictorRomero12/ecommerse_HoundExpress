@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hound Express</title>
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar" id="navbar-container"> 
+        <div class="navbar__brand">
+          <img src="./img/logo.png" alt="Logo de Hound Express" class="navbar__logo" />
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a  onclick="navigateIndex()" class="navbar__link navbar__link--active"">Inicio</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateFormulario()" class="navbar__link">Registro de guías</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateEstado()" class="navbar__link">Estado general</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateListaGuias()" class="navbar__link">Lista de guías</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateBuscarGuias()" class="navbar__link">Buscar guías</a>
+          </li>
+          <li class="navbar__item">
+            <a  onclick="navigateHistorialGuias()" class="navbar__link">Historial de guías</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-content">
+        <h1>Bienvenido a Hound Express</h1>
+        <p>Su socio confiable en logística y envíos</p>
+        <div class="hero-buttons">
+          <a  onclick="navigateFormulario()" class="btn btn-primary">Registrar Guía</a>
+          <a onclick="navigateListaGuias()" class="btn btn-secondary">Ver Guías</a>
+        </div>
+      </div>
+    </main>
+
+    <section class="features">
+      <h2>Nuestros Servicios</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>Envíos Seguros</h3>
+          <p>Garantizamos la seguridad de sus paquetes en todo momento</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <h3>Entrega Rápida</h3>
+          <p>Red de distribución optimizada para entregas veloces</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Rastreo en Tiempo Real</h3>
+          <p>Siga sus envíos en cualquier momento y lugar</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-content">
+        <h2>¿Listo para comenzar?</h2>
+        <p>Únase a miles de clientes satisfechos que confían en Hound Express</p>
+        <a onclick="navigateFormulario()" class="btn btn-large">Comenzar Ahora</a>
+      </div>
+    </section>
+
+    <style>
+     
+
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-content p {
+          font-size: 1.2rem;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Hound Express</h3>
+          <p>Soluciones logísticas confiables para tu negocio</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <p>Email: contacto@houndexpress.com</p>
+          <p>Tel: (55) 1234-5678</p>
+          <p>Dirección: Av. Principal #123, CDMX</p>
+        </div>
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="pages/formulario.html">Registro de guías</a></li>
+            <li><a href="pages/estado.html">Estado general</a></li>
+            <li><a href="pages/listaguias.html">Lista de guías</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Hound Express. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+   <script src="/js/index.js"></script>
+  </body>
+</html>
