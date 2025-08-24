@@ -1,0 +1,105 @@
+.history {
+  margin: $spacing-xl auto;
+  max-width: $max-width-lg;
+  padding: $spacing-base;
+  font-family: $font-family-base;
+
+  &__filters {
+    display: flex;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+
+    input,
+    select {
+      padding: $spacing-sm $spacing-base;
+      font-size: $font-size-sm;
+      border: 1px solid $color-border;
+      border-radius: $border-radius-sm;
+      box-shadow: $box-shadow-sm;
+      outline: none;
+
+      &:focus {
+        border-color: $color-primary;
+        box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__item {
+    background: $color-white;
+    border: 1px solid $color-border-light;
+    border-radius: $border-radius-md;
+    padding: $spacing-base;
+    box-shadow: $box-shadow-md;
+
+    .history__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: $spacing-md;
+
+      h3 {
+        font-size: $font-size-md;
+        color: $color-secondary;
+        margin: 0;
+      }
+
+      .history__date {
+        font-size: $font-size-sm;
+        color: $color-text-light;
+      }
+    }
+  }
+}
+
+.timeline {
+  border-left: 2px solid $color-border;
+  margin-left: $spacing-base;
+  padding-left: $spacing-base;
+
+  &__item {
+    margin-bottom: $spacing-md;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -$spacing-base;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $color-border;
+      border: 2px solid $color-white;
+      box-shadow: $box-shadow-sm;
+    }
+
+    &--completed::before {
+      background: $color-success;
+    }
+
+    &--current::before {
+      background: $color-warning;
+    }
+
+    .timeline__time {
+      display: inline-block;
+      font-size: $font-size-xs;
+      font-weight: bold;
+      color: $color-text-light;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      margin: 0;
+      font-size: $font-size-sm;
+      color: $color-text;
+    }
+  }
+}

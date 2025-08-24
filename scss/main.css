@@ -499,6 +499,99 @@ body {
     font-size: 1.2rem;
   }
 }
+.history {
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.history__filters {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.history__filters input,
+.history__filters select {
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.history__filters input:focus,
+.history__filters select:focus {
+  border-color: #6AC6DE;
+  box-shadow: 0 0 0 2px rgba(106, 198, 222, 0.2);
+}
+.history__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.history__item {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.history__item .history__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.history__item .history__header h3 {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #091E3F;
+  margin: 0;
+}
+.history__item .history__header .history__date {
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #666;
+}
+
+.timeline {
+  border-left: 2px solid #ddd;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+.timeline__item {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.timeline__item--completed::before {
+  background: #28a745;
+}
+.timeline__item--current::before {
+  background: #f1c40f;
+}
+.timeline__item .timeline__time {
+  display: inline-block;
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+.timeline__item p {
+  margin: 0;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #333;
+}
+
 .guide-controls {
   display: flex;
   flex-direction: row;
